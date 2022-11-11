@@ -5,7 +5,7 @@
 """
     Tango Card RaaS API
 
-    <p>Welcome to the RaaS&reg; API – with this RESTful API you can integrate a global reward or incentive program into your app or platform.<br /><br /> This console works in our Sandbox environment. To receive your own credentials or to ask questions, please contact us at <a href=\"mailto:devsupport@tangocard.com\">devsupport@tangocard.com</a>.  # noqa: E501
+    <5. Ordersp>Welcome to the RaaS&reg; API – with this RESTful API you can integrate a global reward or incentive program into your app or platform.<br /><br /> This console works in our Sandbox environment. To receive your own credentials or to ask questions, please contact us at <a href=\"mailto:devsupport@tangocard.com\">devsupport@tangocard.com</a>.  # noqa: E501
 
     OpenAPI spec version: 2
     
@@ -16,13 +16,13 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from tango_client.api.1__customers_api import 1CustomersApi
-from tango_client.api.2__accounts_api import 2AccountsApi
-from tango_client.api.3__fund_api import 3FundApi
-from tango_client.api.4__catalogs_api import 4CatalogsApi
-from tango_client.api.5__orders_api import 5OrdersApi
-from tango_client.api.6__email_templates_api import 6EmailTemplatesApi
-from tango_client.api.7__exchange_rates_api import 7ExchangeRatesApi
+from tango_client.api.accounts_api import AccountsApi
+from tango_client.api.catalogs_api import CatalogsApi
+from tango_client.api.customers_api import CustomersApi
+from tango_client.api.email_templates_api import EmailTemplatesApi
+from tango_client.api.exchange_rates_api import ExchangeRatesApi
+from tango_client.api.fund_api import FundApi
+from tango_client.api.orders_api import OrdersApi
 
 # import ApiClient
 from tango_client.api_client import ApiClient

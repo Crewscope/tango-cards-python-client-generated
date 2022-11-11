@@ -1,14 +1,14 @@
-# tango_client.1CustomersApi
+# tango_client.CustomersApi
 
 All URIs are relative to *https://integration-api.tangocard.com/raas/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_customer**](1CustomersApi.md#create_customer) | **POST** /customers | Create a new Customer on this Platform.
-[**create_customer_account**](1CustomersApi.md#create_customer_account) | **POST** /customers/{customerIdentifier}/accounts | Create an Account under a specific Customer on this Platform.
-[**get_customer**](1CustomersApi.md#get_customer) | **GET** /customers/{customerIdentifier} | Get details for a specific Customer on this Platform.
-[**list_customer_accounts1**](1CustomersApi.md#list_customer_accounts1) | **GET** /customers/{customerIdentifier}/accounts | Get a list of all Accounts created for a specific Customer on this Platform.
-[**list_customers**](1CustomersApi.md#list_customers) | **GET** /customers | Get a list of all Customers on this Platform.
+[**create_customer**](CustomersApi.md#create_customer) | **POST** /customers | Create a new Customer on this Platform.
+[**create_customer_account**](CustomersApi.md#create_customer_account) | **POST** /customers/{customerIdentifier}/accounts | Create an Account under a specific Customer on this Platform.
+[**get_customer**](CustomersApi.md#get_customer) | **GET** /customers/{customerIdentifier} | Get details for a specific Customer on this Platform.
+[**list_customer_accounts1**](CustomersApi.md#list_customer_accounts1) | **GET** /customers/{customerIdentifier}/accounts | Get a list of all Accounts created for a specific Customer on this Platform.
+[**list_customers**](CustomersApi.md#list_customers) | **GET** /customers | Get a list of all Customers on this Platform.
 
 
 # **create_customer**
@@ -30,7 +30,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.1CustomersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.CustomersApi(tango_client.ApiClient(configuration))
 form = tango_client.CreateCustomerCriteria() # CreateCustomerCriteria | <strong>displayName</strong> - a friendly name for this customer <br /><br /><strong>customerIdentifier</strong> - an official identifier for this customer. This identifier needs to be lowercase if alphabetic characters are used. (optional)
 
 try:
@@ -38,7 +38,7 @@ try:
     api_response = api_instance.create_customer(form=form)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 1CustomersApi->create_customer: %s\n" % e)
+    print("Exception when calling CustomersApi->create_customer: %s\n" % e)
 ```
 
 ### Parameters
@@ -81,7 +81,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.1CustomersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.CustomersApi(tango_client.ApiClient(configuration))
 customer_identifier = 'customer_identifier_example' # str | The customerIdentifier for the Customer under which you are creating a new account
 account_criteria = tango_client.CreateAccountCriteria() # CreateAccountCriteria | <strong>contactEmail</strong> - An email address for a designated representative for this account.<br /><br /><strong>displayName</strong> - A friendly name for this account<br /><br /><strong>identifier</strong> - A unique identifier for this account. This identifier must be lowercase if alphabetic characters are used. (optional)
 
@@ -90,7 +90,7 @@ try:
     api_response = api_instance.create_customer_account(customer_identifier, account_criteria=account_criteria)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 1CustomersApi->create_customer_account: %s\n" % e)
+    print("Exception when calling CustomersApi->create_customer_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -134,7 +134,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.1CustomersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.CustomersApi(tango_client.ApiClient(configuration))
 customer_identifier = 'customer_identifier_example' # str | customerIdentifier
 
 try:
@@ -142,7 +142,7 @@ try:
     api_response = api_instance.get_customer(customer_identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 1CustomersApi->get_customer: %s\n" % e)
+    print("Exception when calling CustomersApi->get_customer: %s\n" % e)
 ```
 
 ### Parameters
@@ -185,7 +185,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.1CustomersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.CustomersApi(tango_client.ApiClient(configuration))
 customer_identifier = 'customer_identifier_example' # str | customerIdentifier
 
 try:
@@ -193,7 +193,7 @@ try:
     api_response = api_instance.list_customer_accounts1(customer_identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 1CustomersApi->list_customer_accounts1: %s\n" % e)
+    print("Exception when calling CustomersApi->list_customer_accounts1: %s\n" % e)
 ```
 
 ### Parameters
@@ -236,14 +236,14 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.1CustomersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.CustomersApi(tango_client.ApiClient(configuration))
 
 try:
     # Get a list of all Customers on this Platform.
     api_response = api_instance.list_customers()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 1CustomersApi->list_customers: %s\n" % e)
+    print("Exception when calling CustomersApi->list_customers: %s\n" % e)
 ```
 
 ### Parameters

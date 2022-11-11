@@ -3,7 +3,7 @@
 """
     Tango Card RaaS API
 
-    <p>Welcome to the RaaS&reg; API – with this RESTful API you can integrate a global reward or incentive program into your app or platform.<br /><br /> This console works in our Sandbox environment. To receive your own credentials or to ask questions, please contact us at <a href=\"mailto:devsupport@tangocard.com\">devsupport@tangocard.com</a>.  # noqa: E501
+    <5. Ordersp>Welcome to the RaaS&reg; API – with this RESTful API you can integrate a global reward or incentive program into your app or platform.<br /><br /> This console works in our Sandbox environment. To receive your own credentials or to ask questions, please contact us at <a href=\"mailto:devsupport@tangocard.com\">devsupport@tangocard.com</a>.  # noqa: E501
 
     OpenAPI spec version: 2
     
@@ -41,6 +41,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    &lt;p&gt;Welcome to the RaaS&amp;reg; API – with this RESTful API you can integrate a global reward or incentive program into your app or platform.&lt;br /&gt;&lt;br /&gt; This console works in our Sandbox environment. To receive your own credentials or to ask questions, please contact us at &lt;a href&#x3D;\&quot;mailto:devsupport@tangocard.com\&quot;&gt;devsupport@tangocard.com&lt;/a&gt;.  # noqa: E501
+    &lt;5. Ordersp&gt;Welcome to the RaaS&amp;reg; API – with this RESTful API you can integrate a global reward or incentive program into your app or platform.&lt;br /&gt;&lt;br /&gt; This console works in our Sandbox environment. To receive your own credentials or to ask questions, please contact us at &lt;a href&#x3D;\&quot;mailto:devsupport@tangocard.com\&quot;&gt;devsupport@tangocard.com&lt;/a&gt;.  # noqa: E501
     """
 )

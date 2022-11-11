@@ -1,13 +1,13 @@
-# tango_client.5OrdersApi
+# tango_client.OrdersApi
 
 All URIs are relative to *https://integration-api.tangocard.com/raas/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_order**](5OrdersApi.md#create_order) | **POST** /orders | Create an Order under a specific Account.
-[**get_order**](5OrdersApi.md#get_order) | **GET** /orders/{referenceOrderID} | Get details for a specific Order.
-[**get_order_resends**](5OrdersApi.md#get_order_resends) | **POST** /orders/{referenceOrderID}/resends | Resend a specific Order.
-[**list_orders**](5OrdersApi.md#list_orders) | **GET** /orders | Get a list of Orders placed under this Platform.
+[**create_order**](OrdersApi.md#create_order) | **POST** /orders | Create an Order under a specific Account.
+[**get_order**](OrdersApi.md#get_order) | **GET** /orders/{referenceOrderID} | Get details for a specific Order.
+[**get_order_resends**](OrdersApi.md#get_order_resends) | **POST** /orders/{referenceOrderID}/resends | Resend a specific Order.
+[**list_orders**](OrdersApi.md#list_orders) | **GET** /orders | Get a list of Orders placed under this Platform.
 
 
 # **create_order**
@@ -29,7 +29,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.5OrdersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.OrdersApi(tango_client.ApiClient(configuration))
 create_order_criteria = tango_client.CreateOrderCriteria() # CreateOrderCriteria | <strong>accountIdentifier</strong> - specify the account this order will be deducted from<br/><br/><strong>amount</strong> - specify the face value of of the reward. Always required, including for fixed value items.<br/><br/><strong>campaign</strong> - optional campaign that may be used to administratively categorize a specific order.<br/><br/><strong>customerIdentifier</strong> - specify the customer associated with the order. Must be the customer the accountIdentifier is associated with.<br/><br/><strong>emailSubject</strong> - Optional. If not specified, a default email subject will be used for the specified reward.<br/><br/><strong>externalRefID</strong> - Optional. Idempotenent field that can be used for client-side order cross reference and prevent accidental order duplication. Will be returned in order response, order details, and order history.<br/><br/><strong>message</strong> - optional gift message<br/><br/><strong>recipient - email</strong> - required if sendEmail is true<br/><br/><strong>recipient - firstName</strong> - required if sendEmail is true (100 character max)<br/><br/><strong>recipient - lastName</strong> - always optional (100 character max)<br/><br/><strong>sendEmail</strong> - should Tango Card send the email to the recipient?<br/><br/><strong>sender - firstName</strong> - always optional (100 character max)<br/><br/><strong>sender - lastName</strong> - always optional (100 character max)<br/><br/><strong>sender - email</strong> - always optional<br/><br/><strong>utid</strong> - the unique identifier for the reward you are sending as provided in the Get Catalog call<br/><br/><strong>etid</strong> - Optional. The unique identifier for the email template you would like to use. Only applicable if sendEmail is true.<br/><br/><strong>notes</strong> - Optional order notes (up to 150 characters) (optional)
 
 try:
@@ -37,7 +37,7 @@ try:
     api_response = api_instance.create_order(create_order_criteria=create_order_criteria)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 5OrdersApi->create_order: %s\n" % e)
+    print("Exception when calling OrdersApi->create_order: %s\n" % e)
 ```
 
 ### Parameters
@@ -80,7 +80,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.5OrdersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.OrdersApi(tango_client.ApiClient(configuration))
 reference_order_id = 'reference_order_id_example' # str | Reference order ID is returned in the order response payload
 
 try:
@@ -88,7 +88,7 @@ try:
     api_response = api_instance.get_order(reference_order_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 5OrdersApi->get_order: %s\n" % e)
+    print("Exception when calling OrdersApi->get_order: %s\n" % e)
 ```
 
 ### Parameters
@@ -131,7 +131,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.5OrdersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.OrdersApi(tango_client.ApiClient(configuration))
 reference_order_id = 'reference_order_id_example' # str | Reference order ID is returned in the order response payload
 order_resend_criteria = tango_client.OrderResendRequestCriteria() # OrderResendRequestCriteria | <strong>newEmail</strong> - A new email to resend this order to. (optional)
 
@@ -140,7 +140,7 @@ try:
     api_response = api_instance.get_order_resends(reference_order_id, order_resend_criteria=order_resend_criteria)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 5OrdersApi->get_order_resends: %s\n" % e)
+    print("Exception when calling OrdersApi->get_order_resends: %s\n" % e)
 ```
 
 ### Parameters
@@ -184,7 +184,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.5OrdersApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.OrdersApi(tango_client.ApiClient(configuration))
 account_identifier = 'account_identifier_example' # str | specify the account to be queried. (optional)
 customer_identifier = 'customer_identifier_example' # str | specify the customer to be queried (optional)
 external_ref_id = 'external_ref_id_example' # str | specify the external reference ID to be queried (optional)
@@ -198,7 +198,7 @@ try:
     api_response = api_instance.list_orders(account_identifier=account_identifier, customer_identifier=customer_identifier, external_ref_id=external_ref_id, start_date=start_date, end_date=end_date, elements_per_block=elements_per_block, page=page)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 5OrdersApi->list_orders: %s\n" % e)
+    print("Exception when calling OrdersApi->list_orders: %s\n" % e)
 ```
 
 ### Parameters

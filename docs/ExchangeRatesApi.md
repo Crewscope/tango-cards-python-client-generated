@@ -1,10 +1,10 @@
-# tango_client.7ExchangeRatesApi
+# tango_client.ExchangeRatesApi
 
 All URIs are relative to *https://integration-api.tangocard.com/raas/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_exchange_rates**](7ExchangeRatesApi.md#get_exchange_rates) | **GET** /exchangerates | Get a list of exchange rates.
+[**get_exchange_rates**](ExchangeRatesApi.md#get_exchange_rates) | **GET** /exchangerates | Get a list of exchange rates.
 
 
 # **get_exchange_rates**
@@ -26,14 +26,14 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.7ExchangeRatesApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.ExchangeRatesApi(tango_client.ApiClient(configuration))
 
 try:
     # Get a list of exchange rates.
     api_response = api_instance.get_exchange_rates()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 7ExchangeRatesApi->get_exchange_rates: %s\n" % e)
+    print("Exception when calling ExchangeRatesApi->get_exchange_rates: %s\n" % e)
 ```
 
 ### Parameters

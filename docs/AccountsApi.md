@@ -1,11 +1,11 @@
-# tango_client.2AccountsApi
+# tango_client.AccountsApi
 
 All URIs are relative to *https://integration-api.tangocard.com/raas/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_account**](2AccountsApi.md#get_account) | **GET** /accounts/{identifier} | Get details for a specific Account on this Platform.
-[**list_customer_accounts**](2AccountsApi.md#list_customer_accounts) | **GET** /accounts | Get a list of Accounts created on this Platform.
+[**get_account**](AccountsApi.md#get_account) | **GET** /accounts/{identifier} | Get details for a specific Account on this Platform.
+[**list_customer_accounts**](AccountsApi.md#list_customer_accounts) | **GET** /accounts | Get a list of Accounts created on this Platform.
 
 
 # **get_account**
@@ -27,7 +27,7 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.2AccountsApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.AccountsApi(tango_client.ApiClient(configuration))
 identifier = 'identifier_example' # str | identifier
 
 try:
@@ -35,7 +35,7 @@ try:
     api_response = api_instance.get_account(identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 2AccountsApi->get_account: %s\n" % e)
+    print("Exception when calling AccountsApi->get_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -78,14 +78,14 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = tango_client.2AccountsApi(tango_client.ApiClient(configuration))
+api_instance = tango_client.AccountsApi(tango_client.ApiClient(configuration))
 
 try:
     # Get a list of Accounts created on this Platform.
     api_response = api_instance.list_customer_accounts()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling 2AccountsApi->list_customer_accounts: %s\n" % e)
+    print("Exception when calling AccountsApi->list_customer_accounts: %s\n" % e)
 ```
 
 ### Parameters
