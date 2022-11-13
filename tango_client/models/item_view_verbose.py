@@ -285,8 +285,13 @@ class ItemViewVerbose(object):
         :param fee: The fee of this ItemViewVerbose.  # noqa: E501
         :type: CostAdjustmentEntity
         """
-        if self._configuration.client_side_validation and fee is None:
-            raise ValueError("Invalid value for `fee`, must not be `None`")  # noqa: E501
+        # MANUAL MODIFICATION: Official Tango Cards Swagger has a (potential) mistake, 
+        # calling fee a required field whilst the actual returned API responses are in many cases
+        # missing the fee specification
+        # WORKAROUND: Disabling the validation for fee
+        #
+        #if self._configuration.client_side_validation and fee is None:
+        #    raise ValueError("Invalid value for `fee`, must not be `None`")  # noqa: E501
 
         self._fee = fee
 
