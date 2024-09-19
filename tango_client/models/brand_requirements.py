@@ -168,8 +168,13 @@ class BrandRequirements(object):
         :param terms_and_conditions_instructions: The terms_and_conditions_instructions of this BrandRequirements.  # noqa: E501
         :type: str
         """
-        if self._configuration.client_side_validation and terms_and_conditions_instructions is None:
-            raise ValueError("Invalid value for `terms_and_conditions_instructions`, must not be `None`")  # noqa: E501
+        # MANUAL MODIFICATION: Official Tango Cards Swagger has a (potential) mistake,
+        # calling terms_and_conditions_instructions a required field whilst the actual returned API responses are in some cases
+        # missing this field
+        # WORKAROUND: Disabling the validation for terms_and_conditions_instructions
+        #
+        #if self._configuration.client_side_validation and terms_and_conditions_instructions is None:
+        #    raise ValueError("Invalid value for `terms_and_conditions_instructions`, must not be `None`")  # noqa: E501
 
         self._terms_and_conditions_instructions = terms_and_conditions_instructions
 
