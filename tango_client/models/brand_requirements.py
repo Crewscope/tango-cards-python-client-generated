@@ -108,8 +108,13 @@ class BrandRequirements(object):
         :param disclaimer_instructions: The disclaimer_instructions of this BrandRequirements.  # noqa: E501
         :type: str
         """
-        if self._configuration.client_side_validation and disclaimer_instructions is None:
-            raise ValueError("Invalid value for `disclaimer_instructions`, must not be `None`")  # noqa: E501
+        # MANUAL MODIFICATION: Official Tango Cards Swagger has a (potential) mistake, 
+        # calling disclaimer_instruction a required field whilst the actual returned API responses are in some cases
+        # missing this field
+        # WORKAROUND: Disabling the validation for disclaimer_instructions
+        #
+        #if self._configuration.client_side_validation and disclaimer_instructions is None:
+        #    raise ValueError("Invalid value for `disclaimer_instructions`, must not be `None`")  # noqa: E501
 
         self._disclaimer_instructions = disclaimer_instructions
 
