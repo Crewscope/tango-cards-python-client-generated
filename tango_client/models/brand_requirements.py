@@ -138,8 +138,13 @@ class BrandRequirements(object):
         :param display_instructions: The display_instructions of this BrandRequirements.  # noqa: E501
         :type: str
         """
-        if self._configuration.client_side_validation and display_instructions is None:
-            raise ValueError("Invalid value for `display_instructions`, must not be `None`")  # noqa: E501
+        # MANUAL MODIFICATION: Official Tango Cards Swagger has a (potential) mistake,
+        # calling display_instructions a required field whilst the actual returned API responses are in some cases
+        # missing this field
+        # WORKAROUND: Disabling the validation for display_instructions
+        #
+        #if self._configuration.client_side_validation and display_instructions is None:
+        #    raise ValueError("Invalid value for `display_instructions`, must not be `None`")  # noqa: E501
 
         self._display_instructions = display_instructions
 
